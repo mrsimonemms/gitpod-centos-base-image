@@ -1,0 +1,6 @@
+vscode:
+  extensions:
+    - EditorConfig.EditorConfig
+    - donjayamanne.githistory
+    - octref.vetur
+    - ms-vscode.makefile-tools
