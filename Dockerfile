@@ -44,9 +44,11 @@ RUN useradd -l -u 33333 -G wheel -md /home/gitpod -s /bin/bash -p gitpod gitpod 
 ENV HOME=/home/gitpod
 WORKDIR $HOME
 # custom Bash prompt
-RUN curl -o .git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
-  && echo "source .git-prompt.sh" >> .bashrc
+RUN curl -o /home/gitpod/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
+  && echo "source /home/gitpod/.git-prompt.sh" >> .bashrc
 RUN { echo && echo "PS1='\[\033[01;32m\]\u\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]\$(__git_ps1 \" (%s)\") $ '" ; } >> .bashrc
+
+RUN mkdir -p /var/lib/apt/dazzle-marks
 
 ### Gitpod user (2) ###
 USER gitpod
