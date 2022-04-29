@@ -22,7 +22,7 @@ same image but written on top of CentOS 7.
 
 1. [Why not?](https://www.youtube.com/watch?v=Gqp8BYpzRFs)
 2. We recently had a paying customer enquire about how to do this as their
-Python library had a testing framework that required CentOS for _<reasons>_.
+Python library had a testing framework that required CentOS for _\<reasons\>_.
 I gave them an answer specific to their needs, but this is a more general
 answer for public consumption.
 
